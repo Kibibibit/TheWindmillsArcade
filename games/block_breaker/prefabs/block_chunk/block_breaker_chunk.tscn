@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://8h8mrl1l04cb"]
+
+[ext_resource type="Texture2D" uid="uid://d1u7jgkl03idu" path="res://games/block_breaker/assets/block_chunks.png" id="1_tk3x0"]
+
+[node name="BlockBreakerChunk" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_tk3x0")

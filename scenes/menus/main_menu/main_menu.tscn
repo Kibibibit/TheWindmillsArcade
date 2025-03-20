@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://rohoeof8wqf4"]
+
+[ext_resource type="Script" uid="uid://bcl7nbpixln36" path="res://scripts/ui_elements/game_select_button.gd" id="1_kx65a"]
+[ext_resource type="PackedScene" uid="uid://be7yj4io87t8c" path="res://games/block_breaker/scenes/block_breaker_game.tscn" id="2_flk2s"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="BlockBreaker" type="Button" parent="CenterContainer/GridContainer"]
+layout_mode = 2
+text = "Block Breaker"
+script = ExtResource("1_kx65a")
+game_scene = ExtResource("2_flk2s")

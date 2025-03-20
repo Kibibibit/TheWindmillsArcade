@@ -1,0 +1,6 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://5sldobu1wbvo"]
+
+[ext_resource type="Texture2D" uid="uid://fa11bmewu80m" path="res://games/block_breaker/assets/tiles.png" id="1_x76ac"]
+
+[resource]
+atlas = ExtResource("1_x76ac")

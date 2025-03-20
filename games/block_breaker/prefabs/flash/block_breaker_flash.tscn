@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn8tlf6xqsxhh"]
+
+[ext_resource type="SpriteFrames" uid="uid://dwqc4ref1sfv8" path="res://games/block_breaker/resources/block_breaker_flash_frames.tres" id="1_t3uf2"]
+[ext_resource type="Script" uid="uid://potniap7rbfs" path="res://games/block_breaker/prefabs/flash/block_breaker_flash.gd" id="2_u0fu4"]
+
+[node name="BlockBreakerFlash" type="AnimatedSprite2D"]
+sprite_frames = ExtResource("1_t3uf2")
+frame = 5
+frame_progress = 1.0
+centered = false
+script = ExtResource("2_u0fu4")

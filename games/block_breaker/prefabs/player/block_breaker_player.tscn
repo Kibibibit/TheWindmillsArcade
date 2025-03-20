@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://sv8qp57pl6q2"]
+
+[ext_resource type="Texture2D" uid="uid://bp4am41a34hl5" path="res://games/block_breaker/assets/sprites.png" id="1_7r1cs"]
+[ext_resource type="Script" uid="uid://gmjxvnrn7xrm" path="res://games/block_breaker/prefabs/player/block_breaker_player.gd" id="1_85s36"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_85s36"]
+size = Vector2(16, 16)
+
+[node name="BlockBreakerPlayer" type="StaticBody2D"]
+texture_filter = 1
+script = ExtResource("1_85s36")
+
+[node name="MainBar" type="Sprite2D" parent="."]
+texture = ExtResource("1_7r1cs")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="RightEndCap" type="Sprite2D" parent="."]
+texture = ExtResource("1_7r1cs")
+region_enabled = true
+region_rect = Rect2(16, 0, 16, 16)
+
+[node name="LeftEndCap" type="Sprite2D" parent="."]
+texture = ExtResource("1_7r1cs")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(16, 0, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_85s36")
+one_way_collision = true

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqthud0p7actk"]
+
+[ext_resource type="Texture2D" uid="uid://bp4am41a34hl5" path="res://games/block_breaker/assets/sprites.png" id="1_1vyh2"]
+[ext_resource type="Script" uid="uid://cq7k1enn4bnqr" path="res://games/block_breaker/prefabs/ball/block_breaker_ball.gd" id="1_gde1p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gde1p"]
+size = Vector2(10, 10)
+
+[node name="BlockBreakerBall" type="StaticBody2D"]
+texture_filter = 1
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_gde1p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1vyh2")
+region_enabled = true
+region_rect = Rect2(32, 0, 9, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gde1p")

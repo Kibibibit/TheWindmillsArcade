@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://dmrqobugt2w0"]
+
+[sub_resource type="SystemFont" id="SystemFont_wu8oa"]
+
+[resource]
+base_font = SubResource("SystemFont_wu8oa")
+variation_embolden = 0.92
+variation_transform = Transform2D(1, 0.16, 0, 1, 0, 0)
