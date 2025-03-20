@@ -59,7 +59,7 @@ func _run_serving() -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		state = GameState.PLAYING
 		ball.moving = true
-		ball.direction.x = [1].pick_random()
+		ball.direction.x = [-1,1].pick_random()
 		ball.direction = ball.direction.normalized()
 		return
 
