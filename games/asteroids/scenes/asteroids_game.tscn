@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://bwxy4fqtbknbt"]
+
+[ext_resource type="Script" uid="uid://c7ilv88k7ildp" path="res://games/asteroids/scripts/asteroids_game.gd" id="1_mwtbi"]
+[ext_resource type="PackedScene" uid="uid://dk6v1iqsocpvj" path="res://games/asteroids/prefabs/player/asteroids_player.tscn" id="2_3h463"]
+[ext_resource type="PackedScene" uid="uid://ssdledpvbju4" path="res://games/asteroids/prefabs/bullet/asteroids_bullet.tscn" id="2_phg8s"]
+[ext_resource type="PackedScene" uid="uid://wy7ta0h44dk" path="res://games/asteroids/prefabs/asteroid/asteroids_asteroid.tscn" id="3_hn564"]
+[ext_resource type="Script" uid="uid://bdddbjwa7vlnl" path="res://scripts/ui_elements/floating_text_parent.gd" id="5_h4h8v"]
+[ext_resource type="FontVariation" uid="uid://dmrqobugt2w0" path="res://resources/font_a.tres" id="6_1mugj"]
+
+[node name="AsteroidsGame" type="Node2D" node_paths=PackedStringArray("player", "entities_parent", "floating_text_parent", "score_label")]
+script = ExtResource("1_mwtbi")
+background_color = Color(0.0756, 0.12744, 0.27, 1)
+star_color = Color(1, 1, 1, 1)
+player = NodePath("Entities/AsteroidsPlayer")
+entities_parent = NodePath("Entities")
+bullet_packed_scene = ExtResource("2_phg8s")
+asteroid_packed_scene = ExtResource("3_hn564")
+floating_text_parent = NodePath("Control/FloatingTextParent")
+score_label = NodePath("Control/ScoreDisplay")
+
+[node name="Entities" type="Node2D" parent="."]
+
+[node name="AsteroidsPlayer" parent="Entities" instance=ExtResource("2_3h463")]
+position = Vector2(574, 371)
+shoot_speed = 0.1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FloatingTextParent" type="Control" parent="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_h4h8v")
+
+[node name="ScoreDisplay" type="Label" parent="Control"]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 123.0
+offset_bottom = 64.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("6_1mugj")
+text = "Score: 0"

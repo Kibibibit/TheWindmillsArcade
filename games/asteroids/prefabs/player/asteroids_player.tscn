@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dk6v1iqsocpvj"]
+
+[ext_resource type="Script" uid="uid://ddchqttup6hba" path="res://games/asteroids/prefabs/player/asteroids_player.gd" id="1_sf2r2"]
+
+[node name="AsteroidsPlayer" type="Node2D"]
+script = ExtResource("1_sf2r2")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(16, 0, -16, -16, -13, 0, -16, 16)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(16, 0)

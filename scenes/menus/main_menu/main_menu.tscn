@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://rohoeof8wqf4"]
+[gd_scene load_steps=4 format=3 uid="uid://rohoeof8wqf4"]
 
 [ext_resource type="Script" uid="uid://bcl7nbpixln36" path="res://scripts/ui_elements/game_select_button.gd" id="1_kx65a"]
 [ext_resource type="PackedScene" uid="uid://be7yj4io87t8c" path="res://games/block_breaker/scenes/block_breaker_game.tscn" id="2_flk2s"]
+[ext_resource type="PackedScene" uid="uid://bwxy4fqtbknbt" path="res://games/asteroids/scenes/asteroids_game.tscn" id="3_gm7d7"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -27,3 +28,9 @@ layout_mode = 2
 text = "Block Breaker"
 script = ExtResource("1_kx65a")
 game_scene = ExtResource("2_flk2s")
+
+[node name="Asteroids" type="Button" parent="CenterContainer/GridContainer"]
+layout_mode = 2
+text = "Asteroids"
+script = ExtResource("1_kx65a")
+game_scene = ExtResource("3_gm7d7")

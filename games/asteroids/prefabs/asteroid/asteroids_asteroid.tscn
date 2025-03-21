@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://wy7ta0h44dk"]
+
+[ext_resource type="Script" uid="uid://drguc4p5vtjdb" path="res://games/asteroids/prefabs/asteroid/asteroids_asteroid.gd" id="1_1yc6m"]
+
+[node name="AsteroidsAsteroid" type="Node2D"]
+script = ExtResource("1_1yc6m")
+metadata/_custom_type_script = "uid://u000xm5d2kv6"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Area2D"]
